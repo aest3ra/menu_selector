@@ -1,0 +1,10 @@
+noodle
+raw-fish
+soup
+meat
+barger
+tteokbokki
+rice
+pizza
+chicken
+salad

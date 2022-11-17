@@ -1,0 +1,23 @@
+<html>
+ <head>
+  <title>게시판</title>
+ </head>
+ <body>
+  <div class="menu">
+   <ul>
+    <%- include('nav.ejs') %>
+   </ul>
+   </br>
+   </br>
+   <center>
+    <h1>Register Page</h1><br>
+    <form method="POST">
+    <ul>
+        <li>id : <input type="text" name="userId"></li>
+        <li>password : <input type="password" name="userPW"></li>
+        <li><input type="submit" name="submit" value="register"></li><br><br>
+    </ul>
+    </form>
+   </center>
+ </body>
+</html>
