@@ -1,0 +1,587 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'tag_font';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+/*
+@font-face {
+     font-family: 'main_font';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'main_font';
+    src: url('https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css') format('stylesheet');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+font-family: 'loadingpage_font';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+    font-family: 'AIpage_font';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+		'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol','main_font','tag_font','AIpage_font','loadingpage_font';
+	font-size: 14px;
+	line-height: 1.5;
+	color: #24292e;
+	background-color: #fff;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.app {
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+input.error {
+	border-color: red;
+}
+
+.input-feedback {
+	color: red;
+	height: 5px;
+	margin-top: -12px;
+}
+
+.duration {
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	margin: 4px;
+	color: #fff;
+	background-color: rgba(17, 17, 17, 0.8);
+	opacity: 0.8;
+	padding: 2px, 4px;
+	border-radius: 2px;
+	letter-spacing: 0.5px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 12px;
+}
+
+.wrap {
+	position: absolute;
+	left: 0;
+	bottom: 40px;
+	width: 288px;
+	height: 132px;
+	margin-left: -144px;
+	text-align: left;
+	overflow: hidden;
+	font-size: 12px;
+	font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+	line-height: 1.5;
+}
+.wrap * {
+	padding: 0;
+	margin: 0;
+}
+.wrap .info {
+	width: 286px;
+	height: 120px;
+	border-radius: 5px;
+	border-bottom: 2px solid #ccc;
+	border-right: 1px solid #ccc;
+	overflow: hidden;
+	background: #fff;
+}
+.wrap .info:nth-child(1) {
+	border: 0;
+	box-shadow: 0px 1px 2px #888;
+}
+.info .title {
+	padding: 5px 0 0 10px;
+	height: 30px;
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	font-size: 18px;
+	font-weight: bold;
+}
+.info .close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #888;
+	width: 17px;
+	height: 17px;
+	background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');
+}
+.info .close:hover {
+	cursor: pointer;
+}
+.info .body {
+	position: relative;
+	overflow: hidden;
+}
+.info .desc {
+	position: relative;
+	margin: 13px 0 0 90px;
+	height: 75px;
+}
+.desc .ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.desc .jibun {
+	font-size: 11px;
+	color: #888;
+	margin-top: -2px;
+}
+.info .img {
+	position: absolute;
+	top: 6px;
+	left: 5px;
+	width: 73px;
+	height: 71px;
+	border: 1px solid #ddd;
+	color: #888;
+	overflow: hidden;
+}
+.info:after {
+	content: '';
+	position: absolute;
+	margin-left: -12px;
+	left: 50%;
+	bottom: 0;
+	width: 22px;
+	height: 12px;
+	background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png');
+}
+.info .link {
+	color: #5085bb;
+}
+
+#header {
+    background: url(http://placehold.it/420x160) center top no-repeat;
+}
+#header-inner {
+    background: url(http://placekitten.com/150/200) right top no-repeat;
+}
+.logo-class {
+    height: 128px;
+}
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+    z-index: -1;
+    position:relative;
+}
+.td-main {
+    text-align: center;
+    padding: 80px 10px 80px 10px;
+    border: 1px solid #A02422;
+    background: #ABABAB;
+}
+
+.hyun {font-family: 'Yellowtail', cursive }
+
+
+
+
+/*Detail.css*/
+/*
+// 이거 싹다 적용해야 될걸
+font-family: "main_font";
+font-size: 5px;	
+overflow-y: auto;
+*/
+
+/*media query*/
+/* 360 x 740 
+    orientation: landscape <-- 화면 넓이가 화면 높이보다 크면(전체화면일때)
+*/
+
+@media only screen and (orientation: landscape){
+	.fixed{
+		background-size: 360px 360px;
+		position: fixed; 
+		width: 100%;
+	}
+}
+.fixed{
+		background-size: 360px 360px;
+		position: fixed; 
+		width: 100%;
+}
+
+/* Detail.js에 - <--썻었는데 이제 안씀
+.line{
+	text-align: center;
+	font-size: 30px;
+	color: rgb(217,217,217);
+	font-family: "main_font";
+	font-weight: bold;
+}
+*/
+
+.locName_and_btn_back{
+	/* < 장소이름 - 취소버튼 겸 장소이름 */
+	height: 50%;
+	width: 50%;
+	font-family: "main_font";
+	font-size: 25px;
+	color: rgb(255,233,189);
+}
+
+.front_image{
+	height: 400px;
+	width: 300px;
+	text-align: center;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	display: flex;
+  	flex-direction: column;
+}
+.loc_info_expln{
+	/* 장소이름 + 장소설명*/
+	
+	width: 90%;
+	margin: auto;
+	display: flex;
+  	flex-direction: column;
+}
+.loc_name{
+	width: 100%;
+	
+	/* 장소이름(굵은)  ex) 젠틀가든 팝업 스토어 */
+	font-family: "main_font";
+	font-size: 20px;
+	color:#2f4f4f;
+	font-weight: bold;
+
+	overflow-y: auto;
+	margin: auto;
+}
+.loc_explanation{
+	
+	width: 100%;
+	margin: auto;
+	/* 장소설명~~~~ */
+	font-family: "main_font";
+	
+	font-size: 15px;
+	color: black;
+}
+
+.loccity{
+	
+	width: 100%;
+	margin: auto;
+	/* 장소설명~~~~ */
+	font-family: "main_font";
+	font-weight: bold;
+	font-size: 12px;
+	color: gray;
+}
+
+.loctag{
+	
+	width: 100%;
+	margin: auto;
+	/* 장소설명~~~~ */
+	font-family: "main_font";
+	
+	font-size: 11px;
+	
+}
+
+
+
+.conges_info_inner{	
+	
+	width: 100%;
+	
+	margin: auto;
+	background-color: rgb(236,236,236);
+	border-radius: 0.7rem;
+	
+}
+.conges_info{
+	
+	width: 90%;
+	
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+.d_cong{
+	
+	width: 100%;
+	margin: auto;
+	
+	/* 요일별 혼잡도 */
+	font-family: "main_font";
+	font-size: 18px;
+	color:#2f4f4f;
+	font-weight: bold;
+	
+}
+.d_cong_expln{
+	margin: 10px;
+	
+	/* 월-일 일주일 간 방문객 수를 나타낸 혼잡도입니다. */
+	font-family: "main_font";
+	font-size: 16px;
+	color: rgb(166,166,166);
+	
+}
+.days{
+	
+	width: 100%;
+	
+	/* 월화수목금토일 */
+	font-family: "main_font";
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+	color: rgb(112,112,112);
+}
+.cong_circles{
+	text-align: center;
+	height: 15px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.c_green{
+	/*position: absolute;*/
+	/*width: 18px;*/
+	height: 15px;
+
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 48px;
+	text-align: center;
+	color: #70E08F;
+}
+.c_yellow{
+	/*position: absolute;*/
+	/*width: 18px;*/
+	height: 15px;
+
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 48px;
+	text-align: center;
+	color: #FFFA7A;
+}
+.c_orange{
+	/*position: absolute;*/
+	/*width: 18px;*/
+	height: 15px;
+
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 48px;
+	text-align: center;
+	color: #FFA572;
+}
+.c_red{
+	/*position: absolute;*/
+	/*width: 18px;*/
+	height: 15px;
+
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 48px;
+	text-align: center;
+	color: #FF7A7A;
+}
+
+
+.map_div{
+	height: 60%;
+	width: 100%;
+	background-color:#ffffff;
+}
+.loc_info_with_map{
+	
+	width: 90%;
+	
+	/* 위치정보 */
+	font-family: "main_font";
+	font-size: 18px;
+	font-weight: bold;
+	color:#2f4f4f;
+	margin: auto;
+}
+.map_and_expln{
+	
+	width: 90%;
+	
+	/* 해당 장소의 위치정보입니다. */
+	font-family: "main_font";
+	font-size: 15px;
+	color: rgb(112,112,112);	
+	z-index: 3;
+	margin: auto;
+}
+
+.photos_collection{
+	/* 사진 모음*/
+	
+	width: 90%;
+	margin-top:10px;
+	font-family: "main_font";
+	font-size: 18px;
+	font-weight: bold;
+	color:#2f4f4f;
+	margin: auto;
+}
+.img_and_expln{
+	height: 90%;
+	width: 90%;
+	/* 방문자 및 한국관광공사 제공 사진입니다.*/
+	font-family: "main_font";
+	font-size: 15px;
+	color: rgb(112,112,112);
+	
+	margin: auto;
+}
+.photos{
+	font-family: "main_font";
+	font-size: 10px;
+	margin:auto;
+}
+.photo_div{
+	height: 100%;
+	width: 100%;
+	background-color:#ffffff;
+}
+
+
+
+
+
+.inner-carousel{
+    display: flex;
+	justify-content: flex-start;
+	
+	height: 100%;
+	width: 100%;
+}
+.item7777{
+	/*
+	min-height: 30rem;
+    min-width: 20rem;
+	*/
+
+	width: 180px;
+	
+	margin-right: 4px;
+	margin-left: 4px;
+	
+	height: 100%;
+	/*
+	width: 320px;
+	height: 320px;
+	*/
+}
+
+.item7777 img{
+	
+    width: 150px;
+    height: 150px;
+	
+	/*
+	width: 120%;
+    height: 50%;
+	*/
+	
+    border-radius: 0.5rem;  
+    pointer-events: none;
+	
+	margin-bottom: 10px;
+	padding: 0.1px;
+}
+.dragAreaRef{
+    cursor: grab;
+    overflow: hidden;
+	
+	height: 100%;
+	width: 100%;	
+	
+}
+
+/*KennSlider.css*/
+.KeenSlider{
+	background-color: white;
+	/*border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;*/
+	box-shadow: 0 -10px 10px -8px gray;
+
+}
+
+/*
+box-shadow: none | x-position y-position blur spread color | inset | initial | inherit
+*/
+
+
+
+
+/*Componentpage.css*/
+.wholeView{
+	border-radius: 1.8rem;
+	background-color: pink;
+	
+	height: 100%;
+	width: 100%;
+	
+	overflow-y: auto;
+	
+	font-family: "main_font";
+	font-size: 15px;
+}
+
+
+
+
+/*AIcontent 페이지 css*/
+.GiveMeButton{
+	color:'gray';
+	font-family: "AIpage_font";
+	background-color: rgba(0,0,0,0);
+	border:0;
+	outline:0;
+	
+	margin-left: auto;
+	margin-right: auto;
+	align-items: center;
+	flex-direction: column;
+	
+	font-size:30px;
+	margin-top:25%;
+}
